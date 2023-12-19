@@ -14,3 +14,9 @@ from .day10 import Day10
 from .day11 import Day11
 from .day12 import Day12
 from .day13 import Day13
+from .day14 import Day14
+from .day15 import Day15
+from .day16 import Day16
+from .day17 import Day17
+from .day18 import Day18
+from .day19 import Day19
