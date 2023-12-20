@@ -132,9 +132,6 @@ class Day20(DaySolve, TestSolve):
 		return str(high * low)
 
 	def part2(self) -> str:
-		if 'rx' not in self.gates:
-			return 'undefined'
-
 		found = None
 
 		for gate in self.gates.values():
@@ -143,7 +140,7 @@ class Day20(DaySolve, TestSolve):
 				break
 
 		if found == None:
-			return 'rx has no parent'
+			return 'undefined'
 
 		tracker = dict([ (name, []) for name in self.gates[found.name].input.keys()])
 
