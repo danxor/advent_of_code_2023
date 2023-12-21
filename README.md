@@ -2,7 +2,7 @@
 
 These are my solutions for Advent of Code 2023. They may be naïve and troublesome in many ways but that's part of the fun and part of the challenge.
 
-My goal this year is to reach the global leaderboard; which I have yet to complete, my best day currently is day 10 and star 2 which gave me position 469.
+My goal this year is to reach the global leaderboard; which I have yet to complete, my best day currently is day 21 and star 2 which gave me position 139.
 
 If you'd like to try these challenges yourself you can do it by following [this](https://adventofcode.com/2023) link.
 
