@@ -1,1 +1,2 @@
 requests [security] >= 2.31.0 ; python_version >= "3.10"
+z3-solver >= 4.12 ; python_version >= "3.10"
