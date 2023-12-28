@@ -80,11 +80,11 @@ class Day24(DaySolve, TestSolve):
 		vz = Real("vz")
 
 		for i, hail in enumerate(self.hailstones):
-			t_intercept = Real(f"t_{i}")
+			t = Real(f"t_{i}")
 
-			solver.add(x + vx * t_intercept == hail.position.x + hail.velocity.x * t_intercept)
-			solver.add(y + vy * t_intercept == hail.position.y + hail.velocity.y * t_intercept)
-			solver.add(z + vz * t_intercept == hail.position.z + hail.velocity.z * t_intercept)
+			solver.add(x + vx * t == hail.position.x + hail.velocity.x * t)
+			solver.add(y + vy * t == hail.position.y + hail.velocity.y * t)
+			solver.add(z + vz * t == hail.position.z + hail.velocity.z * t)
 
 		solver.check()
 		return str(solver.model().eval(x + y + z))
