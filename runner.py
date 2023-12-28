@@ -6,6 +6,7 @@ from common import read, get_input, generate_template, DaySolve, TestSolve
 import argparse
 import sys
 import os
+import gc
 
 YEAR_FILE='year.txt'
 COOKIE_FILE='cookie.txt'
@@ -51,15 +52,19 @@ if __name__ == '__main__':
 		args.one = True
 		args.two = True
 
-	if today < christmas_day:
-		if today.month < 12:
-			raise ValueError('You cannot run Advent of Code until december')
+	if today.month < 12:
+		raise ValueError('You cannot run Advent of Code until december')
 
+	if today < christmas_day:
 		if args.all:
 			for d in range(1, 1 + today.day):
 				args.integers.append(d)
 		elif len(args.integers) == 0:
 			args.integers.append(today.day)
+	else:
+		if args.all:
+			for d in range(1, 26):
+				args.integers.append(d)
 
 	if args.gen:
 		for d in args.integers:
@@ -92,7 +97,6 @@ if __name__ == '__main__':
 						data = get_input(args.set_year, d, args.set_cookie)
 						if data:
 							instance = cls()
-
 							instance.parse(data)
 
 							ans1 = instance.part1()
